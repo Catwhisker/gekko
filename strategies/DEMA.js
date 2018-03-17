@@ -68,6 +68,16 @@ method.check = function(candle) {
     log.debug('we are currently not in an up or down trend', message);
     this.advice();
   }
+
+  this.indicatorResult = {
+    trade: {
+      dema:resDEMA,
+      sma:resSMA,
+    },
+    oscillator: {
+      diff:diff,
+    },
+  };
 }
 
 module.exports = method;

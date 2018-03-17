@@ -121,6 +121,14 @@ method.check = function(candle) {
     }
 
     log.debug("Trend: ", this.trend.direction, " for ", this.trend.duration);
+
+    this.indicatorResult = {
+      trade: {
+      },
+      oscillator: {
+        cci:cci.result,
+      },
+    };
 }
 
 module.exports = method;

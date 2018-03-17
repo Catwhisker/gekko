@@ -93,6 +93,16 @@ method.check = function() {
 
     this.advice();
   }
+
+  this.indicatorResult = {
+    trade: {
+    },
+    oscillator: {
+      tsiVal:tsiVal,
+      tsiHigh:this.settings.thresholds.high,
+      tsiLow:this.settings.thresholds.low,
+    },
+  };
 }
 
 module.exports = method;

@@ -143,6 +143,15 @@ method.check = function(candle) {
     this.advice();
   }
 
+  this.indicatorResult = {
+    trade: {
+      longEMA:long,
+      shortEMA:short,
+    },
+    oscillator: {
+      ppoHist:ppoHist,
+    },
+  };
 }
 
 module.exports = method;

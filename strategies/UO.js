@@ -93,6 +93,16 @@ method.check = function() {
 
     this.advice();
   }
+
+  this.indicatorResult = {
+    trade: {
+    },
+    oscillator: {
+      uoVal:uoVal,
+      uoHigh:this.settings.thresholds.high,
+      uoLow:this.settings.thresholds.low,
+    },
+  };
 }
 
 module.exports = method;

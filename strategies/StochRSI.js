@@ -116,6 +116,15 @@ method.check = function() {
 		this.advice();
 	}
 
+  this.indicatorResult = {
+    trade: {
+    },
+    oscillator: {
+      lowestRSI:this.lowestRSI,
+      highestRSI:this.highestRSI,
+      stochRSI:this.stochRSI,
+    },
+  };
 }
 
 module.exports = method;

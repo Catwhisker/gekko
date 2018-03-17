@@ -100,6 +100,14 @@ method.check = function() {
 
     this.advice();
   }
+
+  this.indicatorResult = {
+    trade: {
+    },
+    oscillator: {
+      rsiVal:rsiVal,
+    },
+  };
 }
 
 module.exports = method;

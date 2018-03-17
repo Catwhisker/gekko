@@ -129,6 +129,14 @@ method.check = function() {
 
     this.advice();
   }
+
+  this.indicatorResult = {
+    trade: {
+    },
+    oscillator: {
+      macddiff:macddiff,
+    },
+  };
 }
 
 module.exports = method;

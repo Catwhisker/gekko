@@ -54,6 +54,16 @@ method.check = function(candle) {
     this.advice('long');
 
   }
+
+  this.indicatorResult = {
+    trade: {
+    },
+    oscillator: {
+      macddiff:macddiff,
+      up:this.settings.thresholds.up,
+      down:this.settings.thresholds.down,
+    },
+  };
 }
 
 module.exports = method;

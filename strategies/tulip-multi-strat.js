@@ -52,6 +52,15 @@ method.check = function() {
         log.debug(`tulip-multi-strat In no trend`);
         this.advice();
     }
+
+    this.indicatorResult = {
+      trade: {
+      },
+      oscillator: {
+        adx:this.adx,
+        macd:this.macd,
+      },
+    };
 }
 
 module.exports = method;

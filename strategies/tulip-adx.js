@@ -26,6 +26,16 @@ method.check = function(candle) {
     this.trend = 'long';
     this.advice('long');
   }
+
+  this.indicatorResult = {
+    trade: {
+    },
+    oscillator: {
+      adx:adx,
+      adxUp:this.settings.thresholds.up,
+      adxDown:this.settings.thresholds.down,
+    },
+  };
 }
 
 module.exports = method;
