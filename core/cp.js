@@ -79,6 +79,14 @@ var cp = {
   //   profit: -0.2320439659276161,
   // }
   roundtrip: roundtrip => message('roundtrip', { roundtrip }),
+
+  // object like:
+  // {
+  //   name: "DEMA"
+  //   date: Moment<'2017-03-25 19:41:00'>,
+  //   result: { demaFast:100, demaSlow:50 },
+  // }
+  indicatorResult: indicatorResult => message('indicatorResult', { indicatorResult }),
 }
 
 if(ENV !== 'child-process') {

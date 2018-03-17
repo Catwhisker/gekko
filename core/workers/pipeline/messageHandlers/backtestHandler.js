@@ -7,6 +7,7 @@ module.exports = done => {
   var roundtrips = []
   var candles = [];
   var report = false;
+  var indicatorResults = [];
 
   return {
     message: message => {
@@ -25,6 +26,12 @@ module.exports = done => {
 
       else if(message.log)
         console.log(message.log);
+
+      else if(message.type === 'indicatorResult')
+        indicatorResults.push({
+          result: message.indicatorResult.result,
+          date: message.indicatorResult.date
+        });
     },
     exit: status => {
       if(status !== 0)
@@ -34,7 +41,8 @@ module.exports = done => {
           trades: trades,
           candles: candles,
           report: report,
-          roundtrips: roundtrips
+          roundtrips: roundtrips,
+          indicatorResults: indicatorResults
         });
     }
   }
